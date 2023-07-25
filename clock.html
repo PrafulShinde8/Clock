@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            background: rgb(122, 120, 223) url(data:image/png;base64,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)no-repeat center;
+            height: 20em;
+            width: 20em;
+            background-size: 90%;
+            position: relative;
+            border: 5px solid black;
+        }
+        .clock:after {
+            background: black;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 5%;
+            height: 5%;
+            border-radius: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+
+        .hours-container, .minutes-container, .seconds-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            width: 20em;
+            height: 20em;
+        }
+
+        .hours {
+            background: black;
+            height: 20%;
+            position: absolute;
+            left: 49%;
+            top: 30%;
+            width: 2%;
+            z-index: 2;
+        }
+
+        .minutes {
+            background: black;
+            height: 40%;
+            position: absolute;
+            left: 49%;
+            top: 10%;
+            width: 2%;
+            z-index: 3;
+        }
+        .seconds {
+            background: black;
+            height: 45%;
+            position: absolute;
+            left: 49.5%;
+            top: 14%;
+            width: 1%;
+            z-index: 4;
+        }
+
+        .hours-container {
+            animation: rotatehand 43200s infinite linear;
+        }
+
+        .minutes-container {
+            animation: rotatehand 3600s infinite steps(60);
+        }
+
+        .seconds-container {
+            animation: rotatehand 60s infinite steps(60);
+        }
+
+        @keyframes rotatehand {
+            100% {
+                transform: rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hours-container">
+            <div class="hours"></div>
+        </div>
+        <div class="minutes-container">
+            <div class="minutes"></div>
+        </div>
+        <div class="seconds-container">
+            <div class="seconds"></div>
+        </div>
+</div>
+</body>
+</html>
